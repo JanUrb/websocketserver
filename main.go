@@ -24,7 +24,7 @@ func main() {
 		log.Printf("Registering client: address: %s\t", conn.RemoteAddr().String())
 		register(conn)
 	})
-
+	log.Println("Waiting for connections")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 
 }
